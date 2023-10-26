@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-16 07:46:11 PM"/>
+        <attribute name="created" value="QWNlcjtMQVBUT1AtUkU4SkdCQzA7MjAyMy0xMC0xNjswNzozNzozMiBQTTsyNzAy"/>
+        <attribute name="edited" value="QWNlcjtMQVBUT1AtUkU4SkdCQzA7MjAyMy0xMC0xNjswNzozODowNSBQTTsxO0FjZXI7TEFQVE9QLVJFOEpHQkMwOzIwMjMtMTAtMDk7MDc6MDg6NTggQU07cGVyaGl0dW5nYW4gYmFuZ3VuIGRhdGFyIGJhcnUuZnByZzs4OTcx"/>
+        <attribute name="edited" value="QWNlcjtMQVBUT1AtUkU4SkdCQzA7MjAyMy0xMC0xNjswNzo0NjoxMSBQTTsxOzI4MDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;flowchart menghitung luas dan keliling persegi panjang&quot;" newline="True"/>
+            <declare name="panjang, lebar, luas, keliling" type="Real" array="False" size=""/>
+            <output expression="&quot;masukan panjang&quot;" newline="True"/>
+            <input variable="panjang"/>
+            <output expression="&quot;masukan lebar&quot;" newline="True"/>
+            <input variable="lebar"/>
+            <assign variable="luas" expression="panjang * lebar"/>
+            <assign variable="keliling" expression="2 * (panjang + lebar)"/>
+            <output expression="&quot;luas dari persegi panjang tersebut memiliki Luas sebesar =&quot; &amp;luas &amp;&quot; cm dan keliling sebesar =&quot; &amp;keliling &amp;&quot; cm&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

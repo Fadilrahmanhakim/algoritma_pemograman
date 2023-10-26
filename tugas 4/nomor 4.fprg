@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-18 07:43:24 AM"/>
+        <attribute name="created" value="QWNlcjtMQVBUT1AtUkU4SkdCQzA7MjAyMy0xMC0wOTswNzowODo1OCBBTTsyNjk1"/>
+        <attribute name="edited" value="QWNlcjtMQVBUT1AtUkU4SkdCQzA7MjAyMy0xMC0wOTswOToyMToxNCBBTTs2O0xFTk9WTztMRU5PVk87MjAyMy0xMC0wOTswNzoyNTozNyBBTTtMdWFzIGRhbiBLZWxpbGluZyBUcmFwZXNpdW0gTGluZ2thcmFuWzFdLmZwcmc7OTM1Nw=="/>
+        <attribute name="edited" value="QWNlcjtMQVBUT1AtUkU4SkdCQzA7MjAyMy0xMC0xODswNzo0MzoyNCBBTTsxNTsyODQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan pilihan   (1)persegiPanjang)   (2)trapesium)  (3)jajargenjang)  (4)persegi)   (5)lingkaran (6)ketupat) (7)layang-layang) (8)segitiga))&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan = 1">
+                <then>
+                    <output expression="&quot;perhitungan persegi panjang&quot;" newline="True"/>
+                    <call expression="persegipanjang"/>
+                </then>
+                <else>
+                    <if expression="pilihan = 2">
+                        <then>
+                            <output expression="&quot;perhitungan trapesium&quot;" newline="True"/>
+                            <call expression="Trapesium&#13;&#10;"/>
+                        </then>
+                        <else>
+                            <if expression="pilihan = 3">
+                                <then>
+                                    <output expression="&quot;perhitungan jajar genjang&quot;" newline="True"/>
+                                    <call expression="jajargenjang"/>
+                                </then>
+                                <else>
+                                    <if expression="pilihan = 4">
+                                        <then>
+                                            <output expression="&quot;perhitungan persegi&quot;" newline="True"/>
+                                            <call expression="persegi"/>
+                                        </then>
+                                        <else>
+                                            <if expression="pilihan = 5">
+                                                <then>
+                                                    <output expression="&quot;perhitungan lingkaran&quot;" newline="True"/>
+                                                    <call expression="lingkaran"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="pilihan = 6">
+                                                        <then>
+                                                            <output expression="&quot;perhitungan ketupat&quot;" newline="True"/>
+                                                            <call expression="belahKetupat"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="pilihan = 7">
+                                                                <then>
+                                                                    <output expression="&quot;perhitungan layang-layang&quot;" newline="True"/>
+                                                                    <call expression="layang"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="pilihan = 8">
+                                                                        <then>
+                                                                            <output expression="&quot;perhitungan segitiga&quot;" newline="True"/>
+                                                                            <call expression="segitiga"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;input anda salah&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Apakah anda ingin menghitung bangun datar yang lain? 'Ya' 'Tidak'&quot;" newline="False"/>
+            <declare name="pilihanulang" type="String" array="False" size=""/>
+            <input variable="pilihanulang"/>
+            <if expression="pilihanulang = &quot;Ya&quot;">
+                <then>
+                    <call expression="main"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="belahKetupat" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasilkt" type="Integer" array="False" size=""/>
+            <input variable="hasilkt"/>
+            <if expression="hasilkt = 1">
+                <then>
+                    <declare name="diagonal1, diagonal2, sisi, luas" type="Integer" array="False" size=""/>
+                    <output expression="&quot;masukan sisi&quot;" newline="True"/>
+                    <input variable="sisi"/>
+                    <output expression="&quot;masukan diagonal1&quot;" newline="True"/>
+                    <input variable="diagonal1"/>
+                    <output expression="&quot;masukan diagonal2&quot;" newline="True"/>
+                    <input variable="diagonal2"/>
+                    <assign variable="luas" expression="(diagonal1 * diagonal2) / sisi"/>
+                    <output expression="&quot;luas dari ketupat adalah = &quot;&amp;luas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasilkt = 2">
+                        <then>
+                            <declare name="sisi, keliling" type="Integer" array="False" size=""/>
+                            <output expression="&quot;masukan sisi&quot;" newline="True"/>
+                            <input variable="sisi"/>
+                            <assign variable="keliling" expression="4 * sisi"/>
+                            <output expression="&quot;keliling dari ketupat adalah = &quot;&amp;keliling" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="jajargenjang" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasilj" type="Integer" array="False" size=""/>
+            <input variable="hasilj"/>
+            <if expression="hasilj = 1">
+                <then>
+                    <declare name="alas, tinggi, luas" type="Integer" array="False" size=""/>
+                    <output expression="&quot;masukan panjang&quot;" newline="True"/>
+                    <input variable="alas"/>
+                    <output expression="&quot;masukan lebar&quot;" newline="True"/>
+                    <input variable="tinggi"/>
+                    <assign variable="luas" expression="alas * tinggi"/>
+                    <output expression="&quot;luas jajar genjang adalah = &quot;&amp;luas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasilj = 2">
+                        <then>
+                            <declare name="sisiA, sisiB, keliling" type="Integer" array="False" size=""/>
+                            <output expression="&quot;masukan sisiA&quot;" newline="True"/>
+                            <input variable="sisiA"/>
+                            <output expression="&quot;masukan sisiB&quot;" newline="True"/>
+                            <input variable="sisiB"/>
+                            <assign variable="keliling" expression="2 * (sisiA + sisiB)"/>
+                            <output expression="&quot;keliling dari jajar genjang adalah = &quot;&amp;keliling" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="layang" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasill" type="Integer" array="False" size=""/>
+            <input variable="hasill"/>
+            <if expression="hasill = 1">
+                <then>
+                    <declare name="diagonal1, diagonal2, sisia, sisib, luas" type="Integer" array="False" size=""/>
+                    <output expression="&quot;masukan sisia&quot;" newline="True"/>
+                    <input variable="sisia"/>
+                    <output expression="&quot;masukan sisib&quot;" newline="True"/>
+                    <input variable="sisib"/>
+                    <output expression="&quot;masukan diagonal1&quot;" newline="True"/>
+                    <input variable="diagonal1"/>
+                    <output expression="&quot;masukan diagonal2&quot;" newline="True"/>
+                    <input variable="diagonal2"/>
+                    <assign variable="luas" expression="(diagonal1 * diagonal2) / 2"/>
+                    <output expression="&quot;luas dari layang-layang adalah = &quot;&amp;luas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasill = 2">
+                        <then>
+                            <declare name="sisi, keliling" type="Integer" array="False" size=""/>
+                            <output expression="&quot;masukan sisi&quot;" newline="True"/>
+                            <input variable="sisi"/>
+                            <assign variable="keliling" expression="4 * sisi"/>
+                            <output expression="&quot;keliling dari layang-layang adalah = &quot;&amp;keliling" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Lingkaran" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasill" type="Integer" array="False" size=""/>
+            <input variable="hasill"/>
+            <if expression="hasill = 1">
+                <then>
+                    <declare name="r, hasil" type="Real" array="False" size=""/>
+                    <output expression="&quot;masukan r&quot;" newline="True"/>
+                    <input variable="r"/>
+                    <assign variable="hasil" expression="22/7 * (r * r)"/>
+                    <output expression="hasil" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasill = 2">
+                        <then>
+                            <declare name="r, hasil" type="Real" array="False" size=""/>
+                            <output expression="&quot;masukan r&quot;" newline="True"/>
+                            <input variable="r"/>
+                            <assign variable="hasil" expression="2 * 22/7 * r"/>
+                            <output expression="hasil" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="persegi" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasilps" type="Integer" array="False" size=""/>
+            <input variable="hasilps"/>
+            <if expression="hasilps = 1">
+                <then>
+                    <declare name="sisi, luas" type="Real" array="False" size=""/>
+                    <output expression="&quot;masukan sisi&quot;" newline="True"/>
+                    <input variable="sisi"/>
+                    <assign variable="luas" expression="(sisi * sisi)"/>
+                    <output expression="&quot;luas dari persegi adalah = &quot;&amp;luas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasilps = 2">
+                        <then>
+                            <declare name="sisi, keliling" type="Integer" array="False" size=""/>
+                            <output expression="&quot;masukan sisi&quot;" newline="True"/>
+                            <input variable="sisi"/>
+                            <assign variable="keliling" expression="4 * sisi"/>
+                            <output expression="&quot;keliling dari persegi adalah = &quot;&amp;keliling" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="persegiPanjang" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasilp" type="Integer" array="False" size=""/>
+            <input variable="hasilp"/>
+            <if expression="hasilp = 1">
+                <then>
+                    <declare name="panjang, lebar, luas" type="Integer" array="False" size=""/>
+                    <output expression="&quot;masukan panjang&quot;" newline="True"/>
+                    <input variable="panjang"/>
+                    <output expression="&quot;masukan lebar&quot;" newline="True"/>
+                    <input variable="lebar"/>
+                    <assign variable="luas" expression="panjang * lebar"/>
+                    <output expression="&quot;luas persegi panjang adalah = &quot;&amp;luas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasilp = 2">
+                        <then>
+                            <declare name="panjang, lebar, keliling" type="Integer" array="False" size=""/>
+                            <output expression="&quot;masukan panjang&quot;" newline="True"/>
+                            <input variable="panjang"/>
+                            <output expression="&quot;masukan lebar&quot;" newline="True"/>
+                            <input variable="lebar"/>
+                            <assign variable="keliling" expression="2 * (panjang + lebar)"/>
+                            <output expression="&quot;keliling dari persegi panjang adalah = &quot;&amp;keliling" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="segitiga" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasilsg" type="Integer" array="False" size=""/>
+            <input variable="hasilsg"/>
+            <if expression="hasilsg = 1">
+                <then>
+                    <declare name="sisi, luas" type="Integer" array="False" size=""/>
+                    <output expression="&quot;masukan sisi&quot;" newline="True"/>
+                    <input variable="sisi"/>
+                    <assign variable="luas" expression="3 * sisi"/>
+                    <output expression="&quot;luas dari segitiga adalah = &quot;&amp;luas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasilsg = 2">
+                        <then>
+                            <declare name="alas, tinggi, keliling" type="Integer" array="False" size=""/>
+                            <output expression="&quot;masukan alas&quot;" newline="True"/>
+                            <input variable="alas"/>
+                            <output expression="&quot;masukan tinggi&quot;" newline="True"/>
+                            <input variable="tinggi"/>
+                            <assign variable="keliling" expression="1/2 * (alas * tinggi)"/>
+                            <output expression="&quot;keliling dari segitiga adalah = &quot;&amp;keliling" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Trapesium" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hitung ('1' luas) ('2'keliling)&quot;" newline="True"/>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <input variable="hasil"/>
+            <if expression="hasil = 1">
+                <then>
+                    <declare name="a, b, t, hasil" type="Integer" array="False" size=""/>
+                    <output expression="&quot;masukan alasA&quot;" newline="True"/>
+                    <input variable="a"/>
+                    <output expression="&quot;masukan alasB&quot;" newline="True"/>
+                    <input variable="b"/>
+                    <output expression="&quot;masukan tinggi&quot;" newline="True"/>
+                    <input variable="t"/>
+                    <assign variable="hasil" expression="1/2 * (a + b) * t"/>
+                    <output expression="hasil" newline="True"/>
+                </then>
+                <else>
+                    <if expression="hasil = 2">
+                        <then>
+                            <declare name="a, b, c, d, hasill" type="Integer" array="False" size=""/>
+                            <output expression="&quot;masukan A&quot;" newline="True"/>
+                            <input variable="a"/>
+                            <output expression="&quot;masukan B&quot;" newline="True"/>
+                            <input variable="b"/>
+                            <output expression="&quot;masukan C&quot;" newline="True"/>
+                            <input variable="c"/>
+                            <output expression="&quot;masukan D&quot;" newline="True"/>
+                            <input variable="d"/>
+                            <assign variable="hasil" expression="a + b + c + d"/>
+                            <output expression="hasil" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
